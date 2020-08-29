@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Simple dice game that is played by two players" />
+    <meta name="keywords" content="pig, dice, pig game, dice game" />
+    <meta name="robots" content="nofollow" />
+    
+    <!-- CSS style -->
+    <link type="text/css" href="./CssFiles/pageStyle.css" rel="stylesheet" />
+
+    <!-- Google Font Lato -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Pig Dice Game</title>
+</head>
+
+<body>
+    <!-- Description for gameplay -->
+    <div id="rules" class="displayNone pageBacground ">
+        GAME RULES: <br />
+        - The game has 2 players, playing in rounds<br />
+        - In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND
+        score<br />
+        - BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn<br />
+        - The player can choose to 'Hold', which means that his ROUND score gets added to his GLOBAL score. <br />
+        After that, it's the next player's turn<br />
+        - The first player to reach 100 (you have th chose to change this number) points on GLOBAL score wins the
+        game<br /> <br /> <br />
+        <a role="button" class="fontWeight400" style="font-size: 1.5em">Back to Game</a>
+    </div>
+
+    <!--Game container  -->
+    <div id="gameContainer" class="pageBacground flex flexColumn flexSpaceAround ">
+        <!-- General options -->
+        <div class="newGame flex flexRow flexSpaceAround">
+            <div class="flex flexColumn flexSpaceAround">
+                <button type="button" id="newGame">New Game</button>
+                <button type="button" id="instructions" >Instructions </button>
+            </div>
+
+            <div class="flex flexColumn flexSpaceAround">
+                <label for="finalScoreLable">Final score = 100</label>
+                <input type="text" name="final_score" id="finalScoreLable" />
+                <button type="button" id="finalScore">Set final score</button>
+            </div>
+        </div>
+
+        <!-- Player container -->
+        <div class="playerContainer flex flexColumn">
+
+            <!-- PLayer1 -->
+            <div class="player backgroundColorPale  flex flexSpaceAround ">
+                <div class="flex flexRow">
+                    <p class="fontWeight400">Player1 </p>
+                    <span class="redDot"></span>
+                </div>
+                <div>
+                    <p> Score </p>
+                    <p class="fontStyleRed">0</p>
+                </div>
+
+                <div class="currentScore">
+                    <p> Current </p>
+                    <p class="fontStyleWhite">0</p>
+                </div>
+            </div>
+
+            <!-- PLayer2 -->
+            <div class="player flex flexSpaceAround">
+                <div class="flex flexRow">
+                    <p> Player2 </p>
+                    <span></span>
+                </div>
+                <div>
+                    <p> Score </p>
+                    <p class="fontStyleRed">0</p>
+                </div>
+
+                <div class="currentScore">
+                    <p> Current </p>
+                    <p class="fontStyleWhite">0</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dice and buttons container -->
+        <div id="diceContainer" class="flex flexRow flexSpaceAround">
+            <button type="button" id="rollDice" >Roll Dice </button>
+            <img src="./images/dice-1.png" alt="dice" width="50" style="border: solid black 1px" />
+            <button type="button" id="holdScore">Hold score </button>
+        </div>
+    </div>
+
+    <script src="./JsFiles/diceGameClass.js"></script>
+    <script src="./JsFiles/diceGameFunctions.js"></script>
+    <script src="./JsFiles/diceGameExe.js"></script>
+</body>
+
+</html>

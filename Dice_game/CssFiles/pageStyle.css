@@ -1,0 +1,212 @@
+@keyframes loading 
+{
+    0%   { opacity: 1;}
+    50%  { opacity: 0.2;}
+    100% { opacity: 1;}
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    /* border: solid black 2px;   */
+    font-family: 'Lato', sans-serif ;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+html, body{
+    height: 100%;
+}
+
+p {
+    font-size: 1.25em;
+}
+
+.flex {
+    -webkit-display: flex;
+	-moz-display: flex;
+	-ms-display: flex;
+    display: flex;
+}
+
+.flexRow{
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.flexColumn{
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.flexSpaceAround {
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    -ms-justify-content: space-around;
+    justify-content: space-around;
+}
+
+.pageBacground {
+    
+    height: 100%;
+    background-image: url("./../images/back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.currentScore {
+    width: 70px;
+    height: 50px;
+    background-color: #EB4D4D;
+    border-radius: 15%;
+}
+
+.newGame {
+    width: 100%;
+    height: 16%;
+    text-align: center;
+}
+
+.playerContainer {
+    width: 90%;
+    height: 55%;
+    margin: 0 auto;
+}
+
+.player {
+    height: 45%;
+    background-color: white;
+}
+
+#diceContainer > button,#diceContainer > img {
+    -webkit-align-self: center;
+    -moz-align-self: center;
+    -ms-align-self: center;
+    align-self: center;
+}
+
+div  > p {
+    text-align: center;
+}
+
+.displayNone {
+    display: none;
+}
+
+.inactiveLink {
+    pointer-events: none;
+}
+
+.fontStyleRed {
+    position: relative;
+    top: 20px;
+    font-size: 2em;
+    color: #EB4D4D;
+}
+
+.fontStyleWhite {
+    color: white;
+}
+
+.backgroundColorPale {
+    background-color: rgb(227, 227, 227);
+}
+
+.redDot {
+    width: 10px;
+    height: 10px;
+    background-color:  #EB4D4D;
+    border-radius: 50%;
+    position: relative;
+    top: 8px;
+    left: 8px;
+}
+
+.fontWeight400 {
+    font-weight: 400;
+}
+
+.winner {
+    font-weight: 400;
+    color: #EB4D4D;
+}
+
+button {
+    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+
+    background-color:#ededed;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    font-weight: 400;
+    border:1px solid #dcdcdc;
+    display:inline-block;
+    cursor:pointer;
+    color:#4f4c4f;
+    text-decoration:none;
+    vertical-align: middle;
+    text-shadow:0px 1px 0px #ffffff;
+}
+
+button:hover {
+	background-color:#dfdfdf;
+}
+button:active {
+	position:relative;
+	top:1px;
+}
+
+button::before {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5em;
+    color: rgb(255, 62, 62);
+    padding-right: 0.3em;
+}
+
+#newGame::before{
+    content:"\f055";
+}
+
+#instructions::before{
+    content:"\f013";
+}
+
+#finalScore::before{
+    content:"\f11e";
+}
+
+#rollDice::before{
+    content:"\f021";
+}
+
+#holdScore::before {
+    content:"\f01a";
+}
+
+.animation {
+    -webkit-animation:  loading 2s ease-in-out .0s infinite;
+    -moz-animation:     loading 2s ease-in-out .0s infinite;
+    -ms-animation:      loading 2s ease-in-out .0s infinite;
+    animation:          loading 2s ease-in-out .0s infinite;
+}
+
+#rules > a {
+    cursor:pointer;
+    color:#4f4c4f;
+    font-weight:bold;
+}
+
+@media screen and (min-width: 650px) {
+    .pageBacground {
+        margin: 0 auto;
+        width: 650px;
+    }
+}
